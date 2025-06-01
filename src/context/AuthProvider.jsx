@@ -42,20 +42,6 @@ const AuthProvider = ({ children }) => {
 
       setUser(currentUser);
       setLoading(false);
-
-      if (currentUser?.email) {
-        const userData = { email: currentUser.email }; //as we have send the email to the server so we set the current user email from the client side
-
-        axios
-          .post("http://localhost:3000/jwt", userData, {
-            withCredentials: true,
-          })
-          .then((res) => {
-            console.log("token after jwt", res.data);
-            const token = res.data.token; //just took the token from res.data
-          })
-          .catch((err) => console.log(err));
-      }
     });
     return () => unsubscribe();
   }, []);
@@ -65,7 +51,6 @@ const AuthProvider = ({ children }) => {
     loading,
     signInUser,
     user,
-
     userSignOut,
     googleSignIn,
   };

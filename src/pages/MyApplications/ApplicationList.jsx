@@ -21,7 +21,7 @@ const ApplicationList = ({ applicationsPromise }) => {
           </tr>
         </thead>
         <tbody>
-          {applications.map((application, index) => (
+          {applications?.map((application, index) => (
             <ApplicationTable
               key={application._id}
               application={application}
