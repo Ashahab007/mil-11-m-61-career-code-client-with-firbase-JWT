@@ -15,7 +15,7 @@ const MyPostedJobs = () => {
   const { user } = useAuth();
   return (
     <Suspense fallback={"Your Application is loading . . ."}>
-      {/* 3.1 send the user.accessToken as argument */}
+      {/* 3.1 send the user.accessToken as argument because we know firebase by default give accessToken with the register user*/}
       <MyPostedJobsList
         myPostedJobsPromise={myPostedJobsPromise(user.email, user.accessToken)}
       ></MyPostedJobsList>
