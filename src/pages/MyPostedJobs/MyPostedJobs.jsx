@@ -4,7 +4,7 @@ import MyPostedJobsList from "./MyPostedJobsList";
 
 // 3.2 receive accessToken as parameter and send to header to the server
 const myPostedJobsPromise = (email, accessToken) => {
-  return fetch(`http://localhost:3000/jobs?email=${email}`, {
+  return fetch(`http://localhost:3000/jobs/applications?email=${email}`, {
     headers: {
       authorization: `Bearer ${accessToken}`,
     },
