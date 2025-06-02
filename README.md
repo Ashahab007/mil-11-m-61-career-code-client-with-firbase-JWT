@@ -1,33 +1,18 @@
 Index
 
-1.0 We are applying JWT (jsonwebtoken) in careercode project that's why to clearly understand the jwt we have delete the all comment to understand how to apply jwt.
+1.0 My requirement is JWT using firebase-admin. first, install "npm i firebase-admin" in server.
 
-2.0 How jwt works?
-when client is call any api the server sent a token (AccessToken) and in client side the token is saved using HTTPOnlyCookies (Best method) or localStorage (not a best method). When user want to get the user's data like jobsApply etc every time cookies is sent to server. then server decide if the user is authentic it will send the data. sometimes another token is also sent which is called refresh token. This refresh token works by renew the access token.
+2.0 now to verify the token for my application page so we use in try catch block from firebase doc to decode the token.
 
-3.0 How to install?
-// go to jwt website => Libraries => filter to node.js. Now copy the npm install jsonwebtoken or u can go to the view repo for setup documentation and run in server side. also install cookie-parser by npm i cookie-parser and import it in 3.1.
+3.0 Now my requiremnt is verifyToken for the jobposted user so set the verifyToken in jobposted url.
 
-4.0 My requirement is after install jsonwebtoken import jwt from repo documentation
+4.0 my requirements is some repeatative task that we have done is converted to a common function and custom hooks using axios interceptors. So created a custom hook useAxiosSecure.
 
-5.0 Now our requirement is to verify the token. That's why created a custom middleware which takes 3 parameter req, res, next. এখানে logger দিয়ে check করা হচ্ছে যে api টা logger টাকে hit করে কিনা।
+5.0 Now same thing is done for my posted jobs. So created a custom useJobApi.
 
-6.0 finally we are going to verify the token
+6.0 my requirement is when the token is absent it give error, so we have to handle this error and sign out the user if token is absent.
 
-7.0 before this token verification we have to verify that the token is exist or not
-
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+7.0 Deployment and set firebase admin service key is in the module video 61.8 and 61.9
 
 <!-- .env.local
 

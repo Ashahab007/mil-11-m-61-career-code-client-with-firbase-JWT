@@ -15,7 +15,7 @@ import useApplicationApi from "../../api/useApplicationApi";
 const MyApplications = () => {
   const { user } = useAuth();
 
-  // 4.8 use the useApplicationApi hook
+  // 4.8 use the useApplicationApi hook to get the applicationsPromise data
   const { applicationsPromise } = useApplicationApi();
 
   // 1.1 during registration firebase builtin create an access token of that user

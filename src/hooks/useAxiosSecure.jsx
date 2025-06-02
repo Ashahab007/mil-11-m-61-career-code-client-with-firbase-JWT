@@ -2,13 +2,16 @@ import axios from "axios";
 import React from "react";
 import useAuth from "./useAuth";
 
-// 4.1 create axiosInstance with server url
+// 4.0 my requirements is some repeatative task that we have done is converted to a common function and custom hooks using axios interceptors. So created a custom hook useAxiosSecure
+
+// 4.1 create axiosInstance with server url which is baseURL
 const axiosInstance = axios.create({
   baseURL: "http://localhost:3000",
 });
 
 const useAxiosSecure = () => {
   // 4.2 as we need the accessToken from the user so call the custom hook
+
   //   6.4 call the userSignOut from AuthProvider useAuth()
   const { user, userSignOut } = useAuth();
 
