@@ -23,14 +23,13 @@ export const router = createBrowserRouter([
         Component: Home,
       },
       {
-   
         path: "/jobs/:id",
         Component: JobDetails,
-     
+
         loader: ({ params }) =>
           fetch(`http://localhost:3000/jobs/${params.id}`),
       },
-     
+
       {
         path: "/jobsapply/:id",
         element: (
@@ -40,7 +39,6 @@ export const router = createBrowserRouter([
         ),
       },
       {
-       
         path: "/myApplications",
         element: (
           <PrivateRoutes>
@@ -48,8 +46,6 @@ export const router = createBrowserRouter([
           </PrivateRoutes>
         ),
       },
-
-      
       {
         path: "/applications/:job_id",
         element: (
@@ -57,11 +53,11 @@ export const router = createBrowserRouter([
             <ViewApplications></ViewApplications>
           </PrivateRoutes>
         ),
-       
+
         loader: ({ params }) =>
           fetch(`http://localhost:3000/applications/job/${params.job_id}`),
       },
-    
+
       {
         path: "/addjobs",
         element: (
@@ -70,7 +66,7 @@ export const router = createBrowserRouter([
           </PrivateRoutes>
         ),
       },
-     
+
       {
         path: "/mypostedjobs",
         element: (
