@@ -1,6 +1,6 @@
 import React from "react";
 import useAxiosSecure from "../hooks/useAxiosSecure";
-// 4.4 according to my application page the applicationsPromise  (commented) contains a fetch and a accessToken bearer. The accessToken bearer part is done in 4.3 using axios instance. Now we are going to create a custom hook useApplicationApi for application api url for fetch.
+// 4.4.2 according to my application page the applicationsPromise  (commented) contains a fetch and a accessToken bearer. The accessToken bearer part is done in 4.3 using axios instance. Now we are going to create a custom hook useApplicationApi for application api url for fetch.
 const useApplicationApi = () => {
   // 4.5 call the hook useAxiosSecure()
   const axiosSecure = useAxiosSecure();

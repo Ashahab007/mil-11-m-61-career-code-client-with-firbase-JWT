@@ -58,7 +58,7 @@ const useAxiosSecure = () => {
     }
   );
 
-  //   4.4 return the axiosInstance
+  //   4.4.1 return the axiosInstance
   return axiosInstance;
 };
 
